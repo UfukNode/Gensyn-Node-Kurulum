@@ -119,12 +119,7 @@ Devamında model boyutunu girin:
 | RTX 3070/3090 | 0.5                |
 | RTX 4090 | 1.5                |
 
-📊 Takip Paneli:
-
-* Math Swarm: [https://dashboard-math.gensyn.ai](https://dashboard-math.gensyn.ai)
-* Math Hard Swarm: [https://dashboard-math-hard.gensyn.ai](https://dashboard-math-hard.gensyn.ai)
-
-Screen’den çıkmak için:
+Screen’den çıkıp adımlara devam etmek için:
 
 ```bash
 CTRL + A ardından D
@@ -202,6 +197,8 @@ Bu dosya senin **node kimliğini temsil eder**. Özel bir anahtar gibi düşün.
 
 > 📌 Bu dosyayı güvenli bir klasörde sakla. Silinirse kurtarılamaz. Başka bir sunucuya geçeceksen bu dosyayı oraya taşıman gerekir.
 
+![GoMa3XZWwAAH7qO](https://github.com/user-attachments/assets/14082cea-cfde-433d-a6a9-5f9b3b8c45be)
+
 ---
 
 ## Screen Komutları
@@ -212,6 +209,14 @@ Bu dosya senin **node kimliğini temsil eder**. Özel bir anahtar gibi düşün.
 | `CTRL + A ardından D` | Ekrandan çıkış                   |
 | `screen -ls`          | Tüm screen oturumlarını gösterir |
 | `screen -S <isim>`    | Yeni screen oluşturur            |
+
+---
+
+📊 Takip Paneli:
+
+* Math Swarm: [https://dashboard-math.gensyn.ai](https://dashboard-math.gensyn.ai)
+* Math Hard Swarm: [https://dashboard-math-hard.gensyn.ai](https://dashboard-math-hard.gensyn.ai)
+* Telegram Bot: @gensynImpek_bot
 
 ---
 
