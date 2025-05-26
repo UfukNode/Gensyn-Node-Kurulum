@@ -55,7 +55,8 @@ sudo apt install screen curl iptables build-essential git wget lz4 jq make gcc n
 
 ```bash
 sudo apt install -y python3 python3-pip python3.10-venv
-
+```
+```bash
 curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 sudo apt install -y nodejs
 sudo npm install -g yarn
