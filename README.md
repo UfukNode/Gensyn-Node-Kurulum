@@ -18,27 +18,26 @@ Bu rehber, Gensyn RL Swarm projesinde GPU ile (örn. RTX 3090/4090) ile testnete
 ## 1. Vast.ai Üzerinden Sunucu Kiralama
 
 🔗 [Kayıt ve Giriş](https://cloud.vast.ai/?ref_id=222215)
-→ Sağ üstten **Login** butonuna tıklayarak kayıt ol.
-→ Sol menüden **Billing** > **Add Credit** yolunu izleyerek bakiye yükle (Base ağı üzerinden).
+- Sağ üstten **Login** butonuna tıklayarak kayıt ol.
+- Sol menüden **Billing** > **Add Credit** yolunu izleyerek bakiye yükle (Base ağı üzerinden).
 
 ---
 
 ## 2. Template Seçimi
 
-→ Sol menüden **Templates** kısmına gel.
-
-→ **NVIDIA CUDA** template’ini seç.
-→ GPU bölümünden **RTX 3090** ile **RTX 4090** arasında seçim yap.
-→ **Disk Space**: 100-150 GB arası gir.
-→ **Max Duration**: 2 ay üzeri seçmeye çalış.
+- Sol menüden **Templates** kısmına gel.
+- **NVIDIA CUDA** template’ini seç.
+- GPU bölümünden **RTX 3090** ile **RTX 4090** arasında seçim yap.
+- **Disk Space**: 75-100 GB arası gir.
+- **Max Duration**: 2 ay üzeri seçmeye çalış.
 
 ---
 
 ## 3. Terminale Giriş
 
-→ Sol menüdeki **Instances** sekmesine git.
-→ Kiraladığın sunucunun sağında bulunan **terminal** ikonuna tıkla.
-→ **Open Jupyter Terminal** seçeneğine tıkla.
+- Sol menüdeki **Instances** sekmesine git.
+- Kiraladığın sunucunun sağında bulunan **terminal** ikonuna tıkla.
+- **Open Jupyter Terminal** seçeneğine tıkla.
 
 ---
 
