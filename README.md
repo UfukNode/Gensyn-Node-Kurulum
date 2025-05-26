@@ -26,6 +26,7 @@ Bu rehber, Gensyn RL Swarm projesinde GPU ile (örn. RTX 3090/4090) ile testnete
 ## 2. Template Seçimi
 
 → Sol menüden **Templates** kısmına gel.
+
 → **NVIDIA CUDA** template’ini seç.
 → GPU bölümünden **RTX 3090** ile **RTX 4090** arasında seçim yap.
 → **Disk Space**: 100-150 GB arası gir.
