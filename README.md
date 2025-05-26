@@ -192,10 +192,12 @@ Bu dosya senin **node kimliğini temsil eder**. Özel bir anahtar gibi düşün.
 2. Sol menüden **Instances** sekmesine tıkla.
 3. Sunucunun sağ alt köşesinde bulunan **küçük kutucuğa** tıkla.
 4. Açılan pencere üzerinden şu yolu izle:
-- root > rl-swarm
+```
+root > rl-swarm
+```
 5. `swarm.pem` dosyasını seç ve sağ üstten **Download** butonuna basarak bilgisayarına indir.
 
-> 📌 Bu dosyayı güvenli bir klasörde sakla. Silinirse kurtarılamaz. Başka bir sunucuya geçeceksen bu dosyayı oraya taşıman gerekir.
+>  Bu dosyayı güvenli bir klasörde sakla. Silinirse kurtarılamaz. Başka bir sunucuya geçeceksen bu dosyayı oraya taşıman gerekir.
 
 ![GoMa3XZWwAAH7qO](https://github.com/user-attachments/assets/14082cea-cfde-433d-a6a9-5f9b3b8c45be)
 
