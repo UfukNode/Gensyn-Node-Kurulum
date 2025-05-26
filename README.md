@@ -15,7 +15,7 @@ Bu rehber, Gensyn RL Swarm projesinde GPU ile (örn. RTX 3090/4090) ile testnete
 
 ---
 
-## 1. Vast.ai Üzerinden Sunucu Kiralama
+## 1. Vast.ai Üzerinden Sunucu Kiralama:
 
 🔗 [Kayıt ve Giriş](https://cloud.vast.ai/?ref_id=222215)
 - Sağ üstten **Login** butonuna tıklayarak kayıt ol.
@@ -23,7 +23,7 @@ Bu rehber, Gensyn RL Swarm projesinde GPU ile (örn. RTX 3090/4090) ile testnete
 
 ---
 
-## 2. Template Seçimi
+## 2. Template Seçimi:
 
 - Sol menüden **Templates** kısmına gel.
 - **NVIDIA CUDA** template’ini seç.
@@ -33,7 +33,7 @@ Bu rehber, Gensyn RL Swarm projesinde GPU ile (örn. RTX 3090/4090) ile testnete
 
 ---
 
-## 3. Terminale Giriş
+## 3. Terminale Giriş:
 
 - Sol menüdeki **Instances** sekmesine git.
 - Kiraladığın sunucunun sağında bulunan **terminal** ikonuna tıkla.
@@ -41,7 +41,7 @@ Bu rehber, Gensyn RL Swarm projesinde GPU ile (örn. RTX 3090/4090) ile testnete
 
 ---
 
-## 4. Gerekli Paketlerin Kurulumu
+## 4. Gerekli Paketlerin Kurulumu:
 
 ```bash
 cd $HOME
@@ -51,7 +51,7 @@ sudo apt install screen curl iptables build-essential git wget lz4 jq make gcc n
 
 ---
 
-## 5. Python & Node.js Kurulumu
+## 5. Python & Node.js Kurulumu:
 
 ```bash
 sudo apt install -y python3 python3-pip python3.10-venv
@@ -63,7 +63,7 @@ sudo npm install -g yarn
 
 ---
 
-## 6. RL Swarm Node Kurulumu
+## 6. RL Swarm Node Kurulumu:
 
 ```bash
 git clone https://github.com/gensyn-ai/rl-swarm.git && cd rl-swarm
@@ -97,7 +97,7 @@ Soru geldiğinde **Y** tuşuna basarak devam edin.
 
 ---
 
-## 7. Model Seçimi (Swarm ve Parametre Ayarı)
+## 7. Model Seçimi (Swarm ve Parametre Ayarı):
 
 Kurulum sırasında aşağıdaki seçenekler gelecektir:
 
@@ -160,7 +160,7 @@ ngrok http 3000
 
 ---
 
-## 10. Login Sorunu Yaşarsanız:
+## ⚠️ Login Sorunu Yaşarsanız:
 
 Login modal’ı açılmıyorsa aşağıdaki komutu uygulayın:
 
@@ -169,9 +169,45 @@ sed -i '/return (\s*$/i\
 \n  useEffect(() => {\n    if (!user && !signerStatus.isInitializing) {\n      openAuthModal(); \n    }\n  }, [user, signerStatus.isInitializing]);\n' modal-login/app/page.tsx
 ```
 
+## 10. Soruya Yanıt Ver:
+
+```bash
+screen -r swarm
+```
+- Yüklemeler tamamlandıktan sonra çıkan soruya **N** yanıtını verin.
+
 ---
 
-## 11. Screen Komutları
+## ✅ Peer ID ve Kullanıcı Adı:
+Eğer node’unuz başarıyla ağa katılır ve ilk eğitim görevine başlarsa, sistem sizin için otomatik olarak bir Peer ID ve Kullanıcı Adı verir. Onları sıralamanızı ve takip için bir yere kopyalayabilirsiniz.
+Aşağıdaki çıktıdaki gibi:
+
+---
+
+## 11 `swarm.pem` Dosyasını Kaydet (ÇOK ÖNEMLİ)
+
+Bu dosya senin **node kimliğini temsil eder**. Özel bir anahtar gibi düşün. Eğer kaybedersen:
+
+* Node’unu başka bir sunucuya taşıyamazsın.
+* Her şeye **sıfırdan başlamak zorunda kalırsın**.
+
+### `swarm.pem` Yedekleme (Vast.ai Üzerinden):
+
+1. [https://cloud.vast.ai/?ref\_id=222215](https://cloud.vast.ai/?ref_id=222215) adresine git.
+2. Sol menüden **Instances** sekmesine tıkla.
+3. Sunucunun sağ alt köşesinde bulunan **küçük kutucuğa** tıkla.
+4. Açılan pencere üzerinden şu yolu izle:
+
+   ```
+   root > rl-swarm
+   ```
+5. `swarm.pem` dosyasını seç ve sağ üstten **Download** butonuna basarak bilgisayarına indir.
+
+> 📌 Bu dosyayı güvenli bir klasörde sakla. Silinirse kurtarılamaz. Başka bir sunucuya geçeceksen bu dosyayı oraya taşıman gerekir.
+
+---
+
+## Screen Komutları
 
 | Komut                 | Açıklama                         |
 | --------------------- | -------------------------------- |
@@ -182,7 +218,7 @@ sed -i '/return (\s*$/i\
 
 ---
 
-## 📌 Tavsiyeler
+## ✅ Tavsiyeler
 
 * Her güncellemede node'u durdurup `git fetch origin && git reset --hard origin/main` komutunu çalıştırıp node'u güncelleyebilirsiniz.
 * Sorun yaşarsanız `CTRL + C` ile durdurup `./run_rl_swarm.sh` ile tekrar başlatabilirsiniz.
