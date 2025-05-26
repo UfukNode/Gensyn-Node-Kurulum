@@ -90,7 +90,6 @@ yarn add viem@latest
 cd ..
 ```
 ```bash
-source .venv/bin/activate
 ./run_rl_swarm.sh
 ```
 
