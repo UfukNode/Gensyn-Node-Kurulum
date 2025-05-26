@@ -184,7 +184,7 @@ sed -i '/return (\s*$/i\
 
 ## 📌 Tavsiyeler
 
-* Başlatmadan önce `git fetch origin && git reset --hard origin/main` ile güncelleyin.
+* Her güncellemede node'u durdurup `git fetch origin && git reset --hard origin/main` komutunu çalıştırıp node'u güncelleyebilirsiniz.
 * Sorun yaşarsanız `CTRL + C` ile durdurup `./run_rl_swarm.sh` ile tekrar başlatabilirsiniz.
 
 ---
