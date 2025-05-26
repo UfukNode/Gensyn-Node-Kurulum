@@ -140,8 +140,8 @@ tar -xvzf ngrok-v3-stable-linux-amd64.tgz
 mv ngrok /usr/local/bin/
 ```
 
-→ [Ngrok'a Git](https://ngrok.com)
-→ Hesap oluştur, ardından **Authtoken**’ı kopyalayıp terminale gir:
+- [Ngrok'a Git](https://ngrok.com)
+- Hesap oluştur, ardından **Authtoken**’ı kopyalayıp terminale gir:
 
 ```bash
 ngrok config add-authtoken <BURAYA_TOKEN>
@@ -155,8 +155,8 @@ ngrok config add-authtoken <BURAYA_TOKEN>
 ngrok http 3000
 ```
 
-→ “Forwarding” linkini kopyalayıp tarayıcıya yapıştırın
-→ Google hesabınızla giriş yapın
+- “Forwarding” linkini kopyalayıp tarayıcıya yapıştırın
+- Google hesabınızla giriş yapın
 
 ---
 
