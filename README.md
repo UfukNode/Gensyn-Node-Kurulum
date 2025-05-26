@@ -10,7 +10,7 @@ Bu rehber, Gensyn RL Swarm projesinde GPU ile (örn. RTX 3090/4090) ile testnete
 | ----------------------- | ----------------------------------------- |
 | Platform                | [gensyn.ai](https://gensyn.ai)            |
 | Kurulum Tipi            | GPU Üzerinde                              |
-| Önerilen GPU            | RTX 3090 veya üzeri                       |
+| Önerilen GPU            | RTX 3090 veya 4090                       |
 | Gereken İşletim Sistemi | Vast.ai üzerinde hazır template (Jupyter) |
 
 ---
@@ -109,7 +109,7 @@ b) Math Hard
 
 | Seçenek | Açıklama                                  |
 | ------- | ----------------------------------------- |
-| a       | Düşük GPU’lar için (3070 ve altı)         |
+| a       | Düşük GPU’lar için (3090 ve altı)         |
 | b       | Güçlü GPU’lar için (3090, 4090, A100 vb.) |
 
 Devamında model boyutunu girin:
@@ -117,7 +117,7 @@ Devamında model boyutunu girin:
 | GPU           | Önerilen Parametre |
 | ------------- | ------------------ |
 | RTX 3070/3090 | 0.5                |
-| RTX 3090/4090 | 1.5                |
+| RTX 4090 | 1.5                |
 
 📊 Takip Paneli:
 
