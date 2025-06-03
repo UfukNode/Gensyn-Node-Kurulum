@@ -81,8 +81,9 @@ source .venv/bin/activate
 ```
 
 ```bash
-cd modal-login/
-yarn upgrade 
+cd ~/rl-swarm/modal-login/
+yarn install
+yarn upgrade
 yarn add next@latest
 yarn add viem@latest
 ```
