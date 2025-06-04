@@ -79,17 +79,6 @@ screen -S swarm
 python3 -m venv .venv
 source .venv/bin/activate
 ```
-
-```bash
-cd ~/rl-swarm/modal-login/
-yarn install
-yarn upgrade
-yarn add next@latest
-yarn add viem@latest
-```
-```bash
-cd ..
-```
 ```bash
 ./run_rl_swarm.sh
 ```
