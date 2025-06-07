@@ -33,6 +33,8 @@ Bu rehber, Gensyn RL Swarm projesinde GPU ile (örn. RTX 3090/4090) ile testnete
 - **Disk Space**: 75-100 GB arası gir.
 - **Max Duration**: 2 ay üzeri seçmeye çalış.
 
+![1 (1)](https://github.com/user-attachments/assets/a27c1a8b-5262-40a4-a081-d4a9392b3622)
+
 ---
 
 ## 3. Terminale Giriş:
@@ -40,6 +42,8 @@ Bu rehber, Gensyn RL Swarm projesinde GPU ile (örn. RTX 3090/4090) ile testnete
 - Sol menüdeki **Instances** sekmesine git.
 - Kiraladığın sunucunun sağında bulunan **terminal** ikonuna tıkla.
 - **Open Jupyter Terminal** seçeneğine tıkla.
+
+![1 (1)](https://github.com/user-attachments/assets/c1276b17-1db6-4a02-add0-615c55d29cdb)
 
 ---
 
