@@ -85,6 +85,8 @@ source .venv/bin/activate
 
 Soru geldiğinde **Y** tuşuna basarak devam edin.
 
+![image](https://github.com/user-attachments/assets/8a9e8b42-ec6d-401a-8348-78cd8bce4bfe)
+
 ---
 
 ## 7. Model Seçimi (Swarm ve Parametre Ayarı):
@@ -109,7 +111,9 @@ Devamında model boyutunu girin:
 | RTX 3070/3090 | 0.5                |
 | RTX 4090 | 1.5                |
 
-Screen’den çıkıp adımlara devam etmek için:
+Model seçimi yaptıktan ve aşağıdaki gibi çıktı geldikten sonra Screen’den çıkıp adımlara devam etmek için:
+
+![image](https://github.com/user-attachments/assets/6eaa2542-e6f3-4869-a448-dc266fd62de0)
 
 ```bash
 CTRL + A ardından D
@@ -132,6 +136,8 @@ mv ngrok /usr/local/bin/
 ngrok config add-authtoken <BURAYA_TOKEN>
 ```
 
+![1 (1)](https://github.com/user-attachments/assets/20f5445b-a89a-43d9-96ef-2e264fd0e2f4)
+
 ---
 
 ## 9. Testnet Login:
@@ -142,6 +148,8 @@ ngrok http 3000
 
 - “Forwarding” linkini kopyalayıp tarayıcıya yapıştırın
 - Google hesabınızla giriş yapın
+
+![Adsız tasarım](https://github.com/user-attachments/assets/3b833995-1a06-473c-be2e-e7cba7236730)
 
 ---
 
@@ -160,6 +168,8 @@ sed -i '/return (\s*$/i\
 screen -r swarm
 ```
 - Yüklemeler tamamlandıktan sonra çıkan soruya **N** yanıtını verin.
+
+![image](https://github.com/user-attachments/assets/8423608b-eb4b-49cd-9f5c-52d11e7d6307)
 
 ---
 
