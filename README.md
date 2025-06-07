@@ -183,7 +183,7 @@ screen -r swarm
 Eğer node’unuz başarıyla ağa katılır ve ilk eğitim görevine başlarsa, sistem sizin için otomatik olarak bir Peer ID ve Kullanıcı Adı verir. Onları sıralamanızı ve takip için bir yere kopyalayabilirsiniz.
 Aşağıdaki çıktıdaki gibi:
 
-![Ekran görüntüsü 2025-06-07 204935](https://github.com/user-attachments/assets/a46242b4-ae24-423b-9171-038f2681a201)
+![Adsız tasarım](https://github.com/user-attachments/assets/9e304df6-a27f-4988-ad49-f710662d85dc)
 
 ---
 
