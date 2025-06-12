@@ -86,6 +86,10 @@ python3 -m venv .venv
 source .venv/bin/activate
 ```
 ```bash
+cd
+cd rl-swarm
+```
+```bash
 ./run_rl_swarm.sh
 ```
 
