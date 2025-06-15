@@ -81,7 +81,7 @@ git pull
 
 ---
 
-## RTX 3060 Cihazlar İçin Ayarlar:
+## RTX 3060 Cihazda b-15 Modelini Çalıştırmak İçin Ayarlar (Opsiyonel):
 
 ### A- Ayarlara Git:
 ```bash
@@ -138,6 +138,7 @@ max_rounds: 10000
 model_name_or_path: Gensyn/Qwen2.5-1.5B-Instruct
 output_dir: runs/gsm8k/multinode/Qwen2.5-1.5B-Instruct-Gensyn-Swarm
 ```
+- Bu ayarları daha düşük cihazlarda çalıştırarak maliyet düşürebilirsiniz.
 
 ---
 
