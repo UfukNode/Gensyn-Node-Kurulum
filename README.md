@@ -102,7 +102,7 @@ tf32: true
 dataset_id_or_path: 'openai/gsm8k'
 
 # Training arguments
-max_steps: 20 # Original 450
+max_steps: 10 # Original 450
 num_train_epochs: 1
 gradient_accumulation_steps: 1
 gradient_checkpointing: true
