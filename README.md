@@ -70,7 +70,7 @@ sudo npm install -g yarn
 
 ---
 
-## 6. RL Swarm Node Kurulumu:
+## 6. Repoyu Klonla ve Güncelle:
 
 ```bash
 git clone https://github.com/gensyn-ai/rl-swarm.git && cd rl-swarm
@@ -78,6 +78,70 @@ git clone https://github.com/gensyn-ai/rl-swarm.git && cd rl-swarm
 ```bash
 git pull
 ```
+
+---
+
+## RTX 3060 Cihazlar İçin Ayarlar:
+
+### A- Ayarlara Git:
+```bash
+nano hivemind_exp/configs/gpu/grpo-qwen-2.5-1.5b-deepseek-r1.yaml
+```
+📌 CTRL + K yaparak tüm sayfayı temizle ve aşağıdaki ayarları yapıştır.
+
+### B- Aşağıdaki Optimize Edilmiş Ayarları Gir:
+```bash
+# Model arguments
+model_revision: main
+torch_dtype: float16
+attn_implementation: flash_attention_2
+bf16: false
+tf32: true
+
+# Dataset arguments
+dataset_id_or_path: 'openai/gsm8k'
+
+# Training arguments
+max_steps: 20 # Original 450
+num_train_epochs: 1
+gradient_accumulation_steps: 1
+gradient_checkpointing: true
+gradient_checkpointing_kwargs:
+  use_reentrant: false
+learning_rate: 5.0e-7 # 1.0e-6 as in the deepseek math paper 5-e7 from https://hijkzzz.notion.site/unraveling-rlhf-and-its-variants-engineering-insights#147d9a33ecc98>
+lr_scheduler_type: cosine
+warmup_ratio: 0.03
+
+# GRPO arguments
+use_vllm: false
+num_generations: 2
+per_device_train_batch_size: 1
+beta: 0.001 # 0.04 as in the deepseek math paper 0.001 from https://hijkzzz.notion.site/unraveling-rlhf-and-its-variants-engineering-insights#147d9a33ecc9806090f3d5c7>
+max_prompt_length: 64
+max_completion_length: 128
+
+# Logging arguments
+logging_strategy: steps
+logging_steps: 2
+report_to:
+- wandb
+save_strategy: "steps"
+save_steps: 25
+seed: 42
+
+# Script arguments
+public_maddr: "/ip4/38.101.215.12/tcp/30002"
+host_maddr: "/ip4/0.0.0.0/tcp/38331"
+max_rounds: 10000
+
+# Model-specific arguments
+model_name_or_path: Gensyn/Qwen2.5-1.5B-Instruct
+output_dir: runs/gsm8k/multinode/Qwen2.5-1.5B-Instruct-Gensyn-Swarm
+```
+
+---
+
+## 7. RL Swarm Node Kurulumu
 ```bash
 screen -S swarm
 ```
@@ -99,7 +163,7 @@ Soru geldiğinde **Y** tuşuna basarak devam edin.
 
 ---
 
-## 7. Model Seçimi (Swarm ve Parametre Ayarı):
+## 8. Model Seçimi (Swarm ve Parametre Ayarı):
 
 Kurulum sırasında aşağıdaki seçenekler gelecektir:
 
@@ -131,7 +195,7 @@ CTRL + A ardından D
 
 ---
 
-## 8. Ngrok Kurulumu ve Yetkilendirme:
+## 9. Ngrok Kurulumu ve Yetkilendirme:
 
 ```bash
 wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
@@ -150,7 +214,7 @@ ngrok config add-authtoken <BURAYA_TOKEN>
 
 ---
 
-## 9. Testnet Login:
+## 10. Testnet Login:
 
 ```bash
 ngrok http 3000
@@ -172,7 +236,7 @@ sed -i '/return (\s*$/i\
 \n  useEffect(() => {\n    if (!user && !signerStatus.isInitializing) {\n      openAuthModal(); \n    }\n  }, [user, signerStatus.isInitializing]);\n' modal-login/app/page.tsx
 ```
 
-## 10. Soruya Yanıt Ver:
+## 11. Soruya Yanıt Ver:
 
 ```bash
 screen -r swarm
@@ -191,7 +255,7 @@ Aşağıdaki çıktıdaki gibi:
 
 ---
 
-## 11 `swarm.pem` Dosyasını Kaydet (ÇOK ÖNEMLİ)
+## 12 `swarm.pem` Dosyasını Kaydet (ÇOK ÖNEMLİ)
 
 Bu dosya senin **node kimliğini temsil eder**. Özel bir anahtar gibi düşün. Eğer kaybedersen:
 
