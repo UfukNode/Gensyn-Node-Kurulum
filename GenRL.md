@@ -1,3 +1,5 @@
+![0nG0RYDF](https://github.com/user-attachments/assets/cd996cde-fe08-494b-adc7-ba91ae7da763)
+
 ## Zorunlu @gensynai Hatasız Yeni Güncelleme Adımları (RTX-3060)
 
 RL-Swarm’un altyapısı değişti, artık sistem **GenRL** ile çalışıyor.
@@ -46,12 +48,16 @@ cd
 rm -rf rl-swarm .venv
 ```
 
+---
+
 #### 2. Yeni Sürümü Çek
 
 ```bash
 git clone https://github.com/gensyn-ai/rl-swarm.git && cd rl-swarm
 git pull
 ```
+
+---
 
 #### 3. Screen Oluştur (Eskisini sil, yenisini aç)
 
@@ -73,6 +79,8 @@ kill [screen-kodu]
 screen -S swarm
 ```
 
+---
+
 #### 4. Node’u Başlat
 
 ```bash
@@ -81,6 +89,8 @@ python3 -m venv .venv
 source .venv/bin/activate
 ./run_rl_swarm.sh
 ```
+
+---
 
 #### 5. Giriş Yap (Login)
 
@@ -104,6 +114,8 @@ ngrok http 3000
 ```bash
 screen -r swarm
 ```
+
+---
 
 #### 6. İlk Soruları Yanıtla
 
