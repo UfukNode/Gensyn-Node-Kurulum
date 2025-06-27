@@ -106,6 +106,8 @@ ctrl + a + d
 ngrok http 3000
 ```
 
+![452616956-3b833995-1a06-473c-be2e-e7cba7236730](https://github.com/user-attachments/assets/41a916df-f573-408e-81d7-f1da927c54db)
+
 * “Forwarding” satırındaki linke tarayıcıdan gir
 * Mail adresini girip onayla
 * Terminale dön, `ctrl + c` ile çık
@@ -123,7 +125,10 @@ screen -r swarm
 * Model seçim ekranında:
 
 * Sisteminiz zayıfsa `Enter` yaparak varsayılan modeli seçin
-* Sisteminiz güçlü ise aşağıdaki modellerden birini seçebilirsiniz:
+
+![image](https://github.com/user-attachments/assets/71c282c6-0d1a-46d7-a15d-22f3ddbce716)
+
+📌 Sisteminiz güçlü ise aşağıdaki modellerden birini girdikten sonra enter yapabilirsin:
 
 ```text
 Gensyn/Qwen2.5-0.5B-Instruct
