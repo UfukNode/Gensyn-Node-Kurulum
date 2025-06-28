@@ -81,67 +81,6 @@ git pull
 
 ---
 
-## RTX 3060 Cihazda b-15 Modelini Çalıştırmak İçin Ayarlar (Opsiyonel):
-
-### A- Ayarlara Git:
-```bash
-nano hivemind_exp/configs/gpu/grpo-qwen-2.5-1.5b-deepseek-r1.yaml
-```
-📌 CTRL + K yaparak tüm sayfayı temizle ve aşağıdaki ayarları yapıştır.
-
-### B- Aşağıdaki Optimize Edilmiş Ayarları Gir:
-```bash
-# Model arguments
-model_revision: main
-torch_dtype: float16
-attn_implementation: flash_attention_2
-bf16: false
-tf32: true
-
-# Dataset arguments
-dataset_id_or_path: 'openai/gsm8k'
-
-# Training arguments
-max_steps: 10 # Original 450
-num_train_epochs: 1
-gradient_accumulation_steps: 1
-gradient_checkpointing: true
-gradient_checkpointing_kwargs:
-  use_reentrant: false
-learning_rate: 5.0e-7 # 1.0e-6 as in the deepseek math paper 5-e7 from https://hijkzzz.notion.site/unraveling-rlhf-and-its-variants-engineering-insights#147d9a33ecc98>
-lr_scheduler_type: cosine
-warmup_ratio: 0.03
-
-# GRPO arguments
-use_vllm: false
-num_generations: 2
-per_device_train_batch_size: 1
-beta: 0.001 # 0.04 as in the deepseek math paper 0.001 from https://hijkzzz.notion.site/unraveling-rlhf-and-its-variants-engineering-insights#147d9a33ecc9806090f3d5c7>
-max_prompt_length: 64
-max_completion_length: 128
-
-# Logging arguments
-logging_strategy: steps
-logging_steps: 2
-report_to:
-- wandb
-save_strategy: "steps"
-save_steps: 25
-seed: 42
-
-# Script arguments
-public_maddr: "/ip4/38.101.215.12/tcp/30002"
-host_maddr: "/ip4/0.0.0.0/tcp/38331"
-max_rounds: 10000
-
-# Model-specific arguments
-model_name_or_path: Gensyn/Qwen2.5-1.5B-Instruct
-output_dir: runs/gsm8k/multinode/Qwen2.5-1.5B-Instruct-Gensyn-Swarm
-```
-- Bu ayarları daha düşük cihazlarda çalıştırarak maliyet düşürebilirsiniz.
-
----
-
 ## 7. RL Swarm Node Kurulumu
 ```bash
 screen -S swarm
@@ -158,37 +97,7 @@ cd rl-swarm
 ./run_rl_swarm.sh
 ```
 
-Soru geldiğinde **Y** tuşuna basarak devam edin.
-
-![image](https://github.com/user-attachments/assets/8a9e8b42-ec6d-401a-8348-78cd8bce4bfe)
-
----
-
-## 8. Model Seçimi (Swarm ve Parametre Ayarı):
-
-Kurulum sırasında aşağıdaki seçenekler gelecektir:
-
-```
-Which swarm do you want to join?
-a) Math
-b) Math Hard
-```
-
-| Seçenek | Açıklama                                  |
-| ------- | ----------------------------------------- |
-| a       | Düşük GPU’lar için (3090 ve altı)         |
-| b       | Güçlü GPU’lar için (3090, 4090, A100 vb.) |
-
-Devamında model boyutunu girin:
-
-| GPU           | Önerilen Parametre |
-| ------------- | ------------------ |
-| RTX 3070/3090 | 0.5                |
-| RTX 4090 | 1.5                |
-
-Model seçimi yaptıktan ve aşağıdaki gibi çıktı geldikten sonra Screen’den çıkıp adımlara devam etmek için:
-
-![image](https://github.com/user-attachments/assets/6eaa2542-e6f3-4869-a448-dc266fd62de0)
+8- Screen'den Çık:
 
 ```bash
 CTRL + A ardından D
