@@ -137,21 +137,13 @@ ngrok http 3000
 
 ---
 
-## ⚠️ Login Sorunu Yaşarsanız:
-
-Login modal’ı açılmıyorsa aşağıdaki komutu uygulayın:
-
-```bash
-sed -i '/return (\s*$/i\
-\n  useEffect(() => {\n    if (!user && !signerStatus.isInitializing) {\n      openAuthModal(); \n    }\n  }, [user, signerStatus.isInitializing]);\n' modal-login/app/page.tsx
-```
-
 ## 11. Soruya Yanıt Ver:
 
 ```bash
 screen -r swarm
 ```
 - Yüklemeler tamamlandıktan sonra çıkan soruya **N** yanıtını verin.
+- İkinci soruyu ise "enter" yaparak geçin.
 
 ![image](https://github.com/user-attachments/assets/8423608b-eb4b-49cd-9f5c-52d11e7d6307)
 
